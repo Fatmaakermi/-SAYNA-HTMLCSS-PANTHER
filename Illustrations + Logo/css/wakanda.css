@@ -1,0 +1,816 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Les polices */
+@font-face {
+    font-family: 'beyno';
+    src: url("../../police/BEYNO.ttf");
+}
+@font-face {
+    font-family: 'cantarell';
+    src: url("../../police/Cantarell-Regular.ttf");
+}
+@font-face {
+    font-family: 'panthera';
+    src: url("../../police/PantheraRegular-MVZ9J.ttf");
+}
+@font-face {
+    font-family: 'wakanda';
+    src: url("../../police/WakandaForever-Regular.ttf");
+}
+
+
+/* Ajout de l'image de fond */
+body {
+    
+    background-size: cover;
+    color: white;
+}
+
+ /*animation globale*/
+header,
+main,
+footer,
+.icon-box,
+.line-left,
+.line-right {
+    animation: slide 2s ease-in forwards;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ajout des icônes de réseaux sociaux en haut à gauche*/
+    .icon-box {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2%;
+        height: 25%;
+        top: 40%;
+        margin-left: 1.8%;
+        z-index: 3;
+    }
+    
+    .icon-box img {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+        .icon-box img:hover,
+        .icon-box img:focus {
+            filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+        } 
+
+    /* Pour les écrans de 768px maximum */
+        @media screen and (max-width:768px) {
+            .icon-box {
+                display: flex;
+                position: fixed;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 4%;
+                height: 25%;
+                top: 40%;
+                margin-left: 1.8%;
+                z-index: 3;
+            }
+            
+            .icon-box img {
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+
+            .icon-box img:focus,
+            .icon-box img:hover {
+                filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+            }
+        }
+        
+        /* Pour les écrans de largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 4%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
+
+            /* Pour les écrans à largeur entre 1024px et 1320px */
+            @media screen and (min-width:1025px) and (max-width:1319px) {
+                .icon-box {
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 5%;
+                    height: 25%;
+                    top: 40%;
+                    margin-left: 1.8%;
+                    z-index: 3;
+                }
+                
+                .icon-box img {
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                }
+    
+                .icon-box img:focus,
+                .icon-box img:hover {
+                    filter: invert(0%) sepia(100%) saturate(0%) brightness(200%) hue-rotate(360deg) contrast(150%);
+                }
+            }
+
+/* Mise en place et mise en forme des traits verticaux */
+.line-left, .line-right {
+    position: fixed;
+    top: 0;
+    width: 2px;
+    background-color: #d77ef0c9;
+    z-index: 3;
+}
+
+  .line-left {
+    margin-left: 1.1%;
+    height: 65.5%;
+  }
+  
+  .line-right {
+    margin-left: 2.8%;
+    height: 38%;
+  }
+
+/* Mise en forme des éléments du header */
+    /* Ajout des styles pour les rubriques*/
+header {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        text-decoration: underline;
+    }
+    .menu li a.active {
+        text-decoration: underline;
+        color: #c179d3c9;
+    }
+    
+/* Positionnement des éléments du header*/
+    .navigation {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 20px;
+    }
+
+    header nav a {
+        margin-left: 5%;
+    }
+
+    .menu {
+        display: flex;
+        position: absolute;
+        right: 8%;
+        font-family: 'beyno';
+        font-size: 32px;
+    }
+    
+    .menu ul li {
+        display: inline-flex;
+        padding-left: 120px;
+    }      
+
+
+    /* Pour les écrans de 768px max */
+    @media screen and (max-width: 768px) {
+        header {
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+        }
+            .menu li a {
+                color: white;
+                text-decoration: none;
+            }
+            .menu li a:hover {
+                text-decoration: underline;
+            }
+            .menu li a.active {
+                text-decoration: underline;
+                color: #c179d3c9;
+            }
+            .navigation {
+                position: relative;
+                display: flex;
+                width: 100%;
+                padding: 20px;
+            }
+            header nav a {
+                margin-left: 5%;
+            }
+        
+            .menu {
+                display: flex;
+                position: absolute;
+                right: 3%;
+                font-family: 'beyno';
+                font-size: 18px;
+            }
+            .menu ul li {
+                display: flex;
+                padding-left: 10px;
+                padding-bottom: 12px;
+            }    
+        }
+       
+        /* Pour les écrans à largeur comprise entre 768px et 1024px */
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            header {
+                position: relative;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav a {
+                text-decoration: none;
+            }
+                .menu li a {
+                    color: white;
+                    text-decoration: none;
+                }
+                .menu li a:hover {
+                    text-decoration: underline;
+                }
+                .menu li a.active {
+                    text-decoration: underline;
+                    color: #c179d3c9;
+                }
+                .navigation {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    padding: 20px;
+                }
+                header nav a {
+                    margin-left: 5%;
+                }
+            
+                .menu {
+                    display: flex;
+                    position: absolute;
+                    right: 3%;
+                    font-family: 'beyno';
+                    font-size: 18px;
+                }
+                .menu ul li {
+                    display: flex;
+                    padding-left: 10px;
+                    padding-bottom: 12px;
+                } 
+        }
+
+
+/* Mise en forme du contenu de la page après le header */
+h3 {
+    font-family: 'wakanda';
+}
+section {
+    width: 100%;
+}
+.contain-top {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url('../Wakanda/Pantherwakanda1.png');
+    background-size: cover;
+    height: 800px;
+    z-index: 0;
+}
+.wakanda-forever {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: justify;
+    margin-left: 10%;
+    z-index: 1;
+}
+    .wakanda-forever h1 {
+        font-family: 'beyno';
+    }
+
+.contain-middle {
+   
+    position: relative;
+    display: flex;
+    width: 91%;
+    margin: auto;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.background-img {
+    position: absolute;
+    display: flex;
+    width: 90%;
+    height: 50%;
+    background-image: url('../Wakanda/Pantherwakanda2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.contain-left {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    text-align: justify;
+    z-index: 1;
+}
+    .video {
+        position: relative;
+        text-align: center;
+    }
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-image: url('Wakanda/icon_player.png');
+        background-size: cover;
+        cursor: pointer;
+    }
+
+.contain-right {
+    margin-top: 100px;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    z-index: 1;
+}
+
+    /* Pour les écrans à largeur entre 768px et 1024px */
+    @media screen and (min-width: 769px) and (max-width: 1025px) {
+    section {
+        width: 100%;
+    }
+    .contain-top {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-image: url('Wakanda/Pantherwakanda1.png');
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        z-index: 0;
+    }
+    .wakanda-forever {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        text-align: justify;
+        margin-left: 30%;
+        z-index: 1;
+    }
+    
+    .contain-middle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 91%;
+        margin: auto;
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+    
+    .background-img {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-image: url('Wakanda/Pantherwakanda2.png');
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: top;
+        z-index: 0;
+        opacity: 0.2;
+    }
+    
+    .contain-left {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 91%;
+        margin: auto;
+        text-align: justify;
+        z-index: 1;
+    }
+        .video {
+            position: relative;
+            text-align: center;
+        }
+        iframe {
+            width: 560px;
+            height: 360px;
+        }
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-image: url('Wakanda/icon_player.png');
+            background-size: cover;
+            cursor: pointer;
+        }
+    
+    .contain-right {
+        margin-top: 100px;
+        width: 91%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        z-index: 1;
+    }
+    }
+
+    /* Pour les écrans à largeur inférieure à 768px */
+    @media screen and (max-width: 768px) {
+        section {
+            width: 100%;
+        }
+        .contain-top {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-image: url('Wakanda/Pantherwakanda1.png');
+            background-size: cover;
+            background-position: center;
+            height: 800px;
+            z-index: 0;
+        }
+        .wakanda-forever {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            text-align: justify;
+            margin-left: 20%;
+            z-index: 1;
+        }
+        
+        .contain-middle {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 91%;
+            margin: auto;
+            justify-content: space-between;
+            padding-bottom: 100px;
+        }
+        
+        .background-img {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background-image: url('Wakanda/Pantherwakanda2.png');
+            background-repeat: repeat;
+            background-size: contain;
+            background-position: top;
+            z-index: 0;
+            opacity: 0.2;
+        }
+        
+        .contain-left {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            width: 91%;
+            margin: auto;
+            text-align: justify;
+            z-index: 1;
+        }
+            .video {
+                position: relative;
+                text-align: center;
+            }
+            iframe {
+                width: 400px;
+                height: 200px;
+            }
+            .play-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80px;
+                height: 80px;
+                background-image: url('Wakanda/icon_player.png');
+                background-size: cover;
+                cursor: pointer;
+            }
+        
+        .contain-right {
+            margin-top: 100px;
+            width: 91%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            z-index: 1;
+        }
+        }
+
+    /* Pour les écrans à largeur entre 1024px et 1320px */
+    @media screen and (min-width:1025px) and (max-width:1319px) {
+        .video {
+            position: relative;
+            text-align: center;
+        }
+        iframe {
+            width: 400px;
+            height: 250px;
+    }
+    }
+
+    /* Pour les écrans dont la largeur est supérieure à 1319px */
+    @media screen and (min-width: 1320px) {
+        iframe {
+            width: 560px;
+            height: 360px;
+        }
+    }
+
+/* Mise en forme du footer et de ses éléments*/
+footer {
+    position: relative;
+    background-image: url("All-pages/back_footer.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+/* Premier élément du footer*/
+.f1 {
+    position: relative;
+    background-image: url("All-pages/footer1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+    margin-left: 20%;
+}
+    @media screen and (max-width:768px) {
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .f1 {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (min-width:769px) and (max-width:1024px) {
+        .f1 {
+            position: relative;
+            background-image: url("All-pages/footer1.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            transform: scale(0.7);
+            transition: 0.3s ease;
+            margin-left: 10%;
+        }
+    }
+
+    .f1 a {
+        object-fit: contain;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .footer-image {
+            margin-bottom: 40px;
+        }
+
+.f1:hover {
+    transform: scale(0.8);
+}
+
+/* Deuxième élément du footer */
+    .f2 {
+        position: relative;
+        display: flex;
+        width: 40%;
+        height: 250px; 
+        right: 5%;
+        transform: scale(0.9);
+    }
+        @media screen and (max-width:768px) {
+            .f2 {
+                width: 90%;
+            }
+            .f2 div:last-child {
+                margin-left: 30%;
+            }
+        }
+    
+        @media screen and (min-width:769px) and (max-width:1024px) {
+            .f2 {
+                width: 50%;
+            }
+        }
+
+    .f21 {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        padding-right:150px;
+        padding-left: 80px; 
+    }
+        .f21 a {
+            text-decoration: none;
+            color: white;
+        }
+            .f21 a:hover {
+                text-decoration: underline;
+            }
+    
+    .f22 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+    }
+        .f22 .social-network-footer {
+            padding: 7px 0 7px 0;
+            transform: scale(0.8);
+            transition: 0.2s ease;
+        }
+        .f22 .social-network-footer:hover {
+            transform: scale(0.9);
+        }
+            .f22 > div {
+                display: inline-block;
+            }
+
+    .f23 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-top: 120px;
+        margin-left: 100px;
+    }
+    
+    @media screen and (max-width: 419px) {
+        .f2 {
+            display: flex;
+            position: relative;
+            width: 100%;
+            margin: auto;
+            margin-left: 10px;
+        }
+        .f21 {
+            position: absolute;
+            display: block;
+            padding-top: 4px;
+            padding-right: 0;
+            padding-left: 20px; 
+            transform: scale(0.8);
+        }
+        .f22 {
+            transform: scale(0.8);
+            padding-top: 0;
+        }
+        .f22 .social-network-footer {
+            padding: 0;
+            transform: scale(0.7);
+            transition: 0.2s ease;
+        }
+        .f22 .social-network-footer:hover {
+            transform: scale(0.8);
+        }
+            .f22 > div {
+                display: inline-block;
+            }
+    }
+
+
+/* Les styles de texte et police */
+h1 {
+    font-family: 'panthera';
+    font-size: 68px;
+    color: #9E91B7 ;
+}
+
+h2 {
+    font-family: 'beyno';
+    font-size: 32px;
+    color: #9E91B7 ;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+    .contenu {
+        font-family: 'cantarell';
+        font-size: 10px;
+        color: #FFFF;
+    }
+
+
+    #footer-title {
+        font-family: 'cantarell';
+        font-size: 22px;
+        letter-spacing: 28%;
+    }
+
+    footer {
+        background-image: url(../Enigme/back_footer.png);
+        font-family: 'cantarell';
+        font-size: 10px;
+    }
+    .f1 {
+        background-image: url(../Enigme/footer1.png);
+    }
+
+    #cantarell-14 {
+        font-family: 'cantarell';
+        font-size: 14px;
+    }
